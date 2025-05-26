@@ -1,0 +1,8 @@
+Ativo,Ação,Início Previsto,Duração,Dependência / Intertravamento,Observações
+Relé 50/51-FEED,Teste funcional,07:30,00:15,Independente,Inclui pickup e tempo de atraso
+Disjuntor 52-1,Energização,08:00,00:05,Após teste do relé 50/51-FEED,Teste isolado
+Barramento B1,Teste intertravamento,08:10,00:10,Após energização do 52-1,
+Transformador TR1,Teste de relação,08:20,00:20,Independente,Medição primário/secundário
+TR1,Energização primária,08:50,00:10,Após teste de relação do TR1,Observação em carga
+Relé 87T-TR1,Teste diferencial,09:00,00:15,Após energização do TR1,Com carga real simulada
+Disjuntor 52-2,Sincronismo de backup,09:15,00:10,Após relé 87T-TR1,Verificação de sincronismo
