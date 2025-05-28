@@ -1,0 +1,13 @@
+iniconfig==2.1.0
+kaleido==0.2.1
+numpy==2.2.6
+packaging==25.0
+pandas==2.2.2
+plotly==5.21.0
+pluggy==1.6.0
+pytest==8.3.5
+python-dateutil==2.9.0.post0
+pytz==2025.2
+six==1.17.0
+tenacity==9.1.2
+tzdata==2025.2
