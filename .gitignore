@@ -1,0 +1,20 @@
+# Ambientes
+.venv/
+__pycache__/
+*.pyc
+
+# Dados
+*.csv
+*.xlsx
+*.json
+*.pkl
+
+# Outputs
+outputs/
+
+# IDEs
+.vscode/
+.idea/
+
+# Sistema
+.DS_Store
