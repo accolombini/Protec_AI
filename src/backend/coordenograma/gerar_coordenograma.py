@@ -8,7 +8,8 @@ em formato SVG usando Plotly.
 Autor: PETRO_ProtecAI Team
 """
 
-from common.utils import carregar_base_coordenograma
+import pandas as pd
+from src.backend.common.utils import carregar_base_coordenograma
 import plotly.express as px
 import plotly.express as px
 from pathlib import Path
@@ -23,8 +24,10 @@ def gerar_coordenograma(caminho_csv: str, caminho_saida: str) -> None:
         caminho_saida (str): Caminho do arquivo de saída .svg
     """
     df = carregar_base_coordenograma(caminho_csv)
-    df["Início Previsto"] = pd.to_datetime(df["Início Previsto"], format="%H:%M")
-    df["Término"] = df["Início Previsto"] + pd.to_timedelta(df["Duração"] + ":00")
+    df["Início Previsto"] = pd.to_datetime(
+        df["Início Previsto"], format="%H:%M")
+    df["Término"] = df["Início Previsto"] + \
+        pd.to_timedelta(df["Duração"] + ":00")
 
     fig = px.timeline(
         df,
